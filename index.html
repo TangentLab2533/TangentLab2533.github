@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代理工具 - 极简连接</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --radius: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* 顶部导航 */
+        header {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-color); }
+
+        /* 主体布局 */
+        .container {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 40px; font-weight: 300; letter-spacing: 2px; }
+
+        section { margin-bottom: 80px; padding-top: 60px; }
+
+        /* 介绍部分 */
+        .intro-text {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* 定价卡片 */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px 20px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        
+        .card.featured { border: 2px solid var(--primary-color); position: relative; }
+        .badge {
+            position: absolute; top: 15px; right: 15px;
+            background: var(--primary-color); color: white;
+            font-size: 0.7rem; padding: 3px 10px; border-radius: 20px;
+        }
+
+        .price { font-size: 2rem; margin: 15px 0; color: var(--primary-color); }
+        .price span { font-size: 1rem; color: var(--text-sub); }
+
+        /* 联系方式 */
+        .contact-list {
+            list-style: none;
+            display: inline-block;
+            text-align: left;
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--radius);
+        }
+
+        .contact-list li { margin: 12px 0; font-size: 1rem; }
+        .contact-list a { color: var(--primary-color); text-decoration: none; border-bottom: 1px solid transparent; }
+        .contact-list a:hover { border-bottom: 1px solid var(--primary-color); }
+
+        footer { padding: 40px; color: #ccc; font-size: 0.8rem; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#intro">简介</a>
+            <a href="#pricing">定价</a>
+            <a href="#contact">联系</a>
+            <a href="guide.html">教程</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>代理工具</h1>
+
+        <!-- 第一部分：介绍 -->
+        <section id="intro">
+            <div class="intro-text">
+                开启无界探索，与时代脉搏同频。我们的代理工具专为追求极致稳定与隐私的用户打造，助您跨越地域限制，顺畅访问全球互联网资源。即便在普通家用宽带环境下，网速亦可稳健直达 <strong>70Mbps</strong>，让丝滑的 4K 视频流与高效办公成为您的日常。<br>注意：苹果手机使用会比较复杂，不想花费太多时间请勿购买。
+            </div>
+        </section>
+
+        <!-- 第二部分：定价 -->
+        <section id="pricing">
+            <div class="pricing-grid">
+                <div class="card">
+                    <h3>按月计费</h3>
+                    <div class="price">¥20 <span>/ 月</span></div>
+                    <p style="color:#999">灵活体验，随用随开</p>
+                </div>
+                <div class="card featured">
+                    <div class="badge">年度推荐</div>
+                    <h3>年度计划</h3>
+                    <div class="price">¥180 <span>/ 年</span></div>
+                    <p style="color:var(--primary-color)">低至 ¥15 / 月</p>
+                </div>
+                <div class="card">
+                    <h3>永久计划</h3>
+                    <div class="price">¥1600</div>
+                    <p style="color:#ee5253">不推荐购买</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：联系方式 -->
+        <section id="contact">
+            <ul class="contact-list">
+                <li><strong>WeChat：</strong>gsorg_101724</li>
+                <li><strong>Email：</strong><a href="mailto:tangent2533@gmail.com">tangent2533@gmail.com</a></li>
+                <li><strong>Telegram：</strong><a href="https://t.me/chemisjusttotry" target="_blank">t.me/chemisjusttotry</a></li>
+                <li><strong>QQ Group：</strong><a href="https://dlj.bz/qqqun" target="_blank">dlj.bz/qqqun</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2026 Proxy Tools. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
