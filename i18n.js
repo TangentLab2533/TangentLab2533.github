@@ -102,7 +102,7 @@ const translations = {
     'tutorial.title': '使用教程',
     'tutorial.subtitle': '以 Windows-AMD64 版本举例（所有版本GUI一致）',
     'tutorial.step1.title': '打开网站',
-    'tutorial.step1.desc': '打开网站，点击网站顶部"购买"按钮',
+    'tutorial.step1.desc': '打开网站，点击网站顶部"购买"按钮。如果尚未下载软件，可以点击下载按钮选择合适的版本',
     'tutorial.step2.title': '选择激活码',
     'tutorial.step2.desc': '按照自己需求选择激活码，然后进行支付',
     'tutorial.step3.title': '粘贴激活码',
